@@ -1,25 +1,11 @@
-.subject{
+.subject-card{
 
-animation:fade .7s ease;
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:translateY(20px);
+    transition:.25s;
 
 }
 
-to{
+.subject-card:hover{
 
-opacity:1;
-
-transform:translateY(0);
-
-}
+    transform:translateY(-6px);
 
 }

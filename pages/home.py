@@ -1,24 +1,35 @@
 import streamlit as st
 
-from utils.ui import hero,subject_cards
+from utils.ui import hero, subject_cards
 
 
 def show_home():
 
-    st.markdown('<div class="main-container">',unsafe_allow_html=True)
-
     hero()
+
+    st.write("")
 
     subject_cards()
 
-    st.text_input(
+    st.write("")
+    st.write("")
+
+    question = st.text_input(
         "",
-        placeholder="Ask your NEET question..."
+        placeholder="🔍 Ask any NEET doubt..."
     )
 
-    st.button(
+    ask = st.button(
         "🚀 Ask AI",
         use_container_width=True
     )
 
-    st.markdown("</div>",unsafe_allow_html=True)
+    if ask:
+
+        if question.strip() == "":
+
+            st.warning("Please enter your question.")
+
+        else:
+
+            st.success("AI integration will be connected in Sprint 3.")

@@ -1,11 +1,25 @@
-html,body,[class*="css"]{
+.stApp{
 
-    font-family:'Segoe UI',sans-serif;
+    background:var(--background);
 
 }
 
-.stApp{
+.block-container{
 
-    background:var(--bg);
+    max-width:1100px;
+
+    padding-top:2rem;
+
+}
+
+h1,h2,h3,h4{
+
+    color:var(--text);
+
+}
+
+p{
+
+    color:var(--muted);
 
 }
