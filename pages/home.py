@@ -15,9 +15,17 @@ def show_home():
     st.write("")
 
     question = st.text_input(
-        "",
-        placeholder="🔍 Ask any NEET doubt..."
+        "### 🔍 Ask your NEET Question",
+        placeholder="Example: Explain Krebs Cycle in simple language..."
     )
+
+    col1, col2, col3 = st.columns([1,2,1])
+
+    with col2:
+        ask = st.button(
+            "🚀 Ask AI",
+            use_container_width=True
+        )
 
     ask = st.button(
         "🚀 Ask AI",
