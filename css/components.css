@@ -25,3 +25,29 @@
     box-shadow:0 18px 40px rgba(37,99,235,.18);
 
 }
+
+div[role="radiogroup"]{
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+div[role="radiogroup"] label{
+
+    background:white;
+
+    padding:15px 25px;
+
+    border-radius:15px;
+
+    border:2px solid #E2E8F0;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    font-weight:600;
+
+}
