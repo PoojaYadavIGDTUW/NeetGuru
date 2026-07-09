@@ -9,21 +9,37 @@ def show_home():
 
     st.write("")
 
+    # ------------------------
+    # Subject Selection
+    # ------------------------
+
     subject = subject_selector()
 
-    st.success(f"Selected Subject : {subject}")
+    st.session_state["subject"] = subject
 
-    st.write("")
+    st.success(f"📚 Selected Subject : {subject}")
 
-    question = st.text_input(
+    st.divider()
+
+    # ------------------------
+    # Search Box
+    # ------------------------
+
+    placeholder = f"Ask your {subject} question..."
+
+    question = st.text_area(
 
         "",
 
-        placeholder=f"Ask your {subject} question..."
+        placeholder=placeholder,
+
+        height=140
 
     )
 
-    col1,col2,col3 = st.columns([1,2,1])
+    st.write("")
+
+    col1, col2, col3 = st.columns([1,2,1])
 
     with col2:
 
@@ -31,16 +47,20 @@ def show_home():
 
             "🚀 Ask AI",
 
-            use_container_width=True
+            use_container_width=True,
+
+            type="primary"
 
         )
 
     if ask:
 
-        if question.strip()=="":
+        if question.strip() == "":
 
-            st.warning("Please enter a question.")
+            st.warning("Please enter your question.")
 
-        else:
+            return
 
-            st.success("AI integration coming in Sprint 3.")
+        st.session_state["question"] = question
+
+        st.info("🤖 AI will answer in Sprint 3.")
